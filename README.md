@@ -31,7 +31,7 @@ Reasons:
 
 <p><li>(B).i'd use flask instead of django when creating a single page website or landing page</li></p> 
 
-<p><h3>How i hosted the Website</h3><p>
+<p><h2>How i hosted the Website</h2><p>
 i used gunicorn and whitenoise
 <ul>
   <li> whitenoise for staticfiles rendering </li>
