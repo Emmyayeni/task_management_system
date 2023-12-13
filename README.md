@@ -10,9 +10,9 @@
 
 #Problem Set 2 - A functioning web app with API
 
-<p>(A).https://task-system-38db.onrender.com/</p>
+<p><li>(A).https://task-system-38db.onrender.com/</li></p>
 
-<p>(B).https://task-system-38db.onrender.com/api/v1/docs/</p>
+<p><li>(B).https://task-system-38db.onrender.com/api/v1/docs/</li></p>
 
 
 #Problem Set 3
@@ -29,7 +29,7 @@ Reasons:
 
 <p>Message Brokers: Celery's integration</p>
 
-<p>(B).i'd use flask instead of django when creating a single page website or landing page</p> 
+<p><li>(B).i'd use flask instead of django when creating a single page website or landing page</li></p> 
 
 <p><h3>How i hosted the Website</h3><p>
 i used gunicorn and whitenoise
