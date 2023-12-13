@@ -20,7 +20,7 @@ Reasons:
 
 <p><b>Flexible Task Scheduling</b>: It provides a robust scheduling mechanism that supports periodic tasks, making it suitable for scenarios like downloading a list of ISINs every 24 hours.</p>
 
-<p>>Message Brokers: Celery's integration</p>
+<p>Message Brokers: Celery's integration</p>
 
 <p>(B).i'd use flask instead of django when creating a single page website or landing page</p> 
 
