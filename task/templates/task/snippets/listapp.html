@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <h3 class="text-center">Hello 👋 {{request.user.username}}</h3>
+    <div class="card bg-light">
+
+      <div class="card-body">
+        {% for task in tasks %}
+        <div class="card">
+          <div class="card-body p-4">
+              <div class='d-flex align-items-center'>
+                  <div class='crdn1' >
+                      <div><img src="{{task.logo.url}}" width='100px'></div>
+                      <div class='info'>
+                          <h4>{{task.name}}</h4>
+                          <a href="{% url 'single_view' id=task.id %}">View in details<a>
+                      </div>
+                  </div>
+                  
+                  <button class='btn btn-primary disabled align-end'>{{task.point}} points</button>
+              </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>

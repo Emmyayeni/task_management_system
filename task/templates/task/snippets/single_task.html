@@ -1,0 +1,84 @@
+{% include "task/base.html" %}
+{% load static %}
+
+<div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+    {% if request.user.is_staff %}
+    {% include "task/snippets/adheader.html" %}
+    {% else %}
+    {% include "task/snippets/aside.html" %}
+    {% endif %}
+<style>
+    .crd{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .crdn1{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width:300px;
+    }
+    .info{
+        display:flex;
+        flex-direction: column;
+
+    }
+    .align-end{
+        margin-left: 550px;
+    }
+    .content{
+        display: flex;
+        justify-content: center;
+        background: #80808012;
+        align-items:center;
+        margin-top: 30px;
+        height:400px;
+        width:100%;
+        border-radius: 25px;
+    }
+
+
+
+</style>
+<div class="body-wrapper">
+  <!--  Header Start -->
+
+    {% include "task/snippets/header.html" %}
+  <!--  Header End -->
+  <div class="container-fluid">
+    <div class="container-fluid">
+      <form enctype="multipart/form-data" method='post' class="card bg-light">
+        {% csrf_token %}
+        <div class="card-body">
+          <div class="card">
+            <div class="card-body p-4">
+                <div class='d-flex align-items-center'>
+                    <div class='crdn1' >
+                        <div><img src="{{task.logo.url}}" width='100px'></div>
+                        <div class='info'>
+                            <h4>{{task.name}}</h4>
+                            <a href="">{{task.app_link}}<a>
+                        </div>
+                    </div>
+                    
+                    <button class='btn btn-primary disabled align-end'>{{task.point}} points</button>
+                </div>
+                  {% comment %} <input class='d-none' name='app' value={{task}}>
+                  <input class='d-none' name='created' value={{request.user}}> {% endcomment %}
+                  <div class="content">
+                        <div class='d-flex justify-content-center align-items-center ms-auto w-100 '>
+                            <label for='file1'><img src="{% static 'image.png' %}" ></label>
+                            <input id='file1' class='d-none' name='img' type='file' id='upload-type'>
+                        </div>
+                  </div>
+                  <button type='submit' class='btn btn-primary' >submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,40 @@
+{% include "task/base.html" %}
+{% load static %}
+
+<div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+    {% include "task/snippets/adheader.html" %}
+
+<style>
+    .crd{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .crdn1{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width:300px;
+    }
+    .info{
+        display:flex;
+        flex-direction: column;
+
+    }
+    .align-end{
+        margin-left: 550px;
+    }
+   
+
+
+</style>
+<div class="body-wrapper">
+  <!--  Header Start -->
+    {% include "task/snippets/header.html" %}
+  <!--  Header End -->
+  <!--  APP LIST START -->
+  {% include "task/snippets/listapp.html" %}
+  </div>
+  
+</div>

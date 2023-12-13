@@ -1,0 +1,123 @@
+{% include "task/base.html" %}
+{% load static %}
+
+<div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+    {% if request.user.is_staff %}
+
+    {% include "task/snippets/adheader.html" %}
+    {% else %}
+    {% include "task/snippets/aside.html" %}
+    {% endif %}
+
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+        font-family: 'Lato', sans-serif;
+        color: #000;
+      }
+      
+      .student-profile .card {
+        border-radius: 10px;
+      }
+      
+      .student-profile .card .card-header .profile_img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        margin: 10px auto;
+        border: 10px solid #ccc;
+        border-radius: 50%;
+      }
+      
+      .student-profile .card h3 {
+        font-size: 20px;
+        font-weight: 700;
+      }
+      
+      .student-profile .card p {
+        font-size: 16px;
+        color: #000;
+      }
+      
+      .student-profile .table th,
+      .student-profile .table td {
+        font-size: 14px;
+        padding: 5px 10px;
+        color: #000;
+      }
+
+
+</style>
+<div class="body-wrapper">
+  <!--  Header Start -->
+    {% include "task/snippets/header.html" %}
+  <!--  Header End -->
+  <!--  app list START -->
+  <div class="container-fluid">
+    <div class="card bg-light">
+
+      <div class="card-body">
+<!-- Student Profile -->
+<div class="student-profile py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="card shadow-sm">
+            <div class="card-header bg-transparent text-center">
+              <img class="profile_img" src="{% static 'assets/images/profile/user-1.jpg' %}" alt="">
+              <h3>{{user.username}}</h3>
+            </div>
+            <div class="card-body">
+              <p class="mb-0"><strong class="pr-1">Account ID:</strong>32100000{{user.id}}</p>
+              <p class="mb-0"><strong class="pr-1">points:</strong>{{points}}</p>
+              <p class="mb-0"><strong class="pr-1">tasks:</strong>A</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="mb-0"><i class="far fa-clone pr-1"></i>General Information</h3>
+            </div>
+            <div class="card-body pt-0">
+              <table class="table table-bordered">
+                <tr>
+                  <th width="30%">username</th>
+                  <td width="2%">:</td>
+                  <td>{{user.username}}</td>
+                </tr>
+                <tr>
+                  <th width="30%">email	</th>
+                  <td width="2%">:</td>
+                  <td>{{user.email}}</td>
+                </tr>
+                {% comment %} <tr>
+                  <th width="30%">Gender</th>
+                  <td width="2%">:</td>
+                  <td>Male</td>
+                </tr>
+                <tr>
+                  <th width="30%">Religion</th>
+                  <td width="2%">:</td>
+                  <td>Group</td>
+                </tr>
+                <tr>
+                  <th width="30%">blood</th>
+                  <td width="2%">:</td>
+                  <td>B+</td>
+                </tr> {% endcomment %}
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    </div>
+  </div>
+  </div>
+  
+</div>

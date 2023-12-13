@@ -1,0 +1,68 @@
+{% include "task/base.html" %}
+{% load static %}
+
+<div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+    {% if request.user.is_staff %}
+    {% include "task/snippets/adheader.html" %}
+    {% else %}
+    {% include "task/snippets/aside.html" %}
+    {% endif %}
+<style>
+    .crd{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .crdn1{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width:300px;
+    }
+    .info{
+        display:flex;
+        flex-direction: column;
+
+    }
+    .align-end{
+        margin-left: 550px;
+    }
+   
+
+
+</style>
+<div class="body-wrapper">
+  <!--  Header Start -->
+    {% include "task/snippets/header.html" %}
+  <!--  Header End -->
+  <!--  app list START -->
+  <div class="container-fluid">
+    <div class="card bg-light">
+
+      <div class="card-body">
+        <div class='d-flex text-center justify-between'>total points: <b>{{points}}</b></h3></div>
+        <br/ >
+        {% for task in tasks %}
+        <div class="card">
+          <div class="card-body p-4">
+              <div class='d-flex align-items-center'>
+                  <div class='crdn1' >
+                      <div><img src="{{task.app.logo.url}}" width='100px'></div>
+                      <div class='info'>
+                          <h4>{{task.app.name}}</h4>
+                          <a href="{% url 'single_view' id=task.app.id %}">View in details<a>
+                      </div>
+                  </div>
+                  
+                  <button class='btn btn-primary disabled align-end'>{% if task.completed == True %} + {{task.app.point}}{% else %} pending {% endif %}</button>
+              </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  </div>
+  
+</div>
