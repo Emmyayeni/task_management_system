@@ -24,3 +24,12 @@ Reasons:
 
 <p>(B).i'd use flask instead of django when creating a single page website or landing page</p> 
 
+<p><h3>How make i hosted the</h3><p>
+i used gunicorn and whitenoise
+<ul>
+  <li> whitenoise for staticfiles rendering </li>
+  <li>gunicorn for building and deployment</li>
+</ul>
+
+
+
