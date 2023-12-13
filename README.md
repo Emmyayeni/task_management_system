@@ -1,11 +1,13 @@
 # Django Evaluation - final
 #Problem Set I - Regex
-json_text = '{"orders":[{"id":1},{"id":2},{"id":3},{"id":4},{"id":5},{"id":6},{"id":7},{"id":8},{"id":9},{"id":10},{"id":11},{"id":648},{"id":649},{"id":650},{"id":651},{"id":652},{"id":653}],"errors":[{"code":3,"message":"[PHP Warning #2] count(): 
-orange_background_indicator = 'orange'
-pattern = r'"id":(\d+).*?"background-color:\s*{}.*?"'.format(orange_background_indicator)
-matches = re.findall(pattern, json_text)
-numbers = [int(match) for match in matches]
-print(numbers)
+
+<p>json_text = '{"orders":[{"id":1},{"id":2},{"id":3},{"id":4},{"id":5},{"id":6},{"id":7},{"id":8},{"id":9},{"id":10},{"id":11},{"id":648},{"id":649},{"id":650},{"id":651},{"id":652},{"id":653}],"errors":[{"code":3,"message":"[PHP Warning #2] count(): </p>
+<p>orange_background_indicator = 'orange'</p>
+<p>pattern = r'"id":(\d+).*?"background-color:\s*{}.*?"'.format(orange_background_indicator)</p>
+<p>matches = re.findall(pattern, json_text)</p>
+<p>numbers = [int(match) for match in matches]</p>
+<p>print(numbers)</p>
+
 #Problem Set 2 - A functioning web app with API
 
 <p>(A).https://task-system-38db.onrender.com/</p>
