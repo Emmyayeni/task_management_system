@@ -38,6 +38,19 @@
         width:100%;
         border-radius: 25px;
     }
+    @media (max-width:400px){
+      .crdn1 img{
+          width: 50px !important;
+      }
+      .align-end{
+          margin-left: 0 !important;
+          font-size: 10px !important;
+      }
+      h4{
+        font-size: 16px !important;
+      }
+ }
+
 
 
 
@@ -59,12 +72,14 @@
                         <div><img src="{{task.logo.url}}" width='100px'></div>
                         <div class='info'>
                             <h4>{{task.name}}</h4>
-                            <a href="">{{task.app_link}}<a>
                         </div>
+
                     </div>
+
                     
                     <button class='btn btn-primary disabled align-end'>{{task.point}} points</button>
                 </div>
+                <a href="">{{task.app_link}}<a>
                   {% comment %} <input class='d-none' name='app' value={{task}}>
                   <input class='d-none' name='created' value={{request.user}}> {% endcomment %}
                   <div class="content">
